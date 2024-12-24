@@ -98,6 +98,10 @@ class QaScooterOrderPage(BasePage):
     def wait_url(self, time = 10):
         return WebDriverWait(self.driver, time).until(EC.url_to_be(Urls.DZEN_PAGE))
 
+    @allure.step('Получение информации о заказе')
+    def receiving_the_order_text(self):
+        return self.find_element(QaScooterOrderPageLocators.order_number).text
+
 
 
 

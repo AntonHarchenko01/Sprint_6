@@ -24,7 +24,7 @@ class TestQaScooterOrderPage:
         qa_scooter_order_page.click_order_button()
         qa_scooter_order_page.click_accept_button()
         result = 'Номер заказа'
-        assert result in qa_scooter_order_page.find_element(QaScooterOrderPageLocators.order_number).text
+        assert result in qa_scooter_order_page.receiving_the_order_text()
 
     @allure.title('Создание заказа через нижнюю кнопку "Заказать"')
     @allure.description('Проверка, через нижнюю кнопку "Заказать", что при корректном заполнении всех полей заказ успешно оформится и присвоится номер')
@@ -40,7 +40,7 @@ class TestQaScooterOrderPage:
         qa_scooter_order_page.click_order_button()
         qa_scooter_order_page.click_accept_button()
         result = 'Номер заказа'
-        assert result in qa_scooter_order_page.find_element(QaScooterOrderPageLocators.order_number).text
+        assert result in qa_scooter_order_page.receiving_the_order_text()
 
     @allure.title('Проверка кнопки "Самокат" для перехода на главную страницу')
     @allure.description('Проверка кнопки "Самокат" для перехода на главную страницу, через страницу заказа')
